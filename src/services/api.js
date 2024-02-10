@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'https://noderunner.onrender.com/api/sandbox';
+const API_URL = 'https://noderunner-api.onrender.com/api/sandbox';
 
 
 const sandboxService = {
@@ -17,7 +17,7 @@ const sandboxService = {
 };
 const executeCode = async (code) => {
     try {
-        const response = await axios.post(`https://noderunner.onrender.com/api/execute`, { code });
+        const response = await axios.post(`https://noderunner-api.onrender.com/api/execute`, { code });
         console.log(response.data)
         return response.data;
     } catch (error) {
@@ -37,7 +37,7 @@ const createSandbox = async (userId, code) => {
 // retrieve all sandboxes for a user
 const getSandboxesByUser = async (userId) => {
     try {
-        const response = await axios.post(`https://noderunner.onrender.com/api/user`, { userId });
+        const response = await axios.post(`https://noderunner-api.onrender.com/api/user`, { userId });
         return response.data;
     } catch (error) {
         throw error.response.data;

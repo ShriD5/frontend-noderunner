@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://noderunner.onrender.com';
-
+const API_URL = 'https://noderunner-api.onrender.com';
 const signup = async (email, password) => {
     try {
         console.log('Sending signup request...');
